@@ -1,0 +1,17 @@
+<h1>Teacher can upload assignment there!</h1>
+<!-- {{message}} -->
+<div style="padding: 100px; background-image: url(https://th.bing.com/th/id/R70529d44ba984e05ff1c095e28449f86?rik=NwCXfUcko81YPw&pid=ImgRaw);">
+        <div>
+                <h3>Upload Assignment:</h3> 
+                <!-- <input style="padding-left: 100px;" [(ngModel)]="message" type="file"/> -->
+                <input type="file" style="padding-left: 300px;" class="file-input"
+               [accept]="requiredFileType"
+               (change)="onFileSelected($event)" #fileUpload>
+                <h3>Description:</h3>
+                <input type="text" [(ngModel)]="message" style="margin-left: 300px; width: 800; height:800 ;"/>        
+                <br>
+                <input style="margin: 100px;margin-left: 300px;" (click)="upload()" type="button" value="Upload"/>
+                
+        </div>
+</div>
+
