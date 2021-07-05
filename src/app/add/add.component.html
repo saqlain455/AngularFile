@@ -9,9 +9,15 @@
                (change)="onFileSelected($event)" #fileUpload>
                 <h3>Description:</h3>
                 <input type="text" [(ngModel)]="message" style="margin-left: 300px; width: 800; height:800 ;"/>        
+                <input type="text" [(ngModel)]="title" style="margin-left: 300px; width: 800; height:800 ;"/>        
+                <input type="text" [(ngModel)]="experience" style="margin-left: 300px; width: 800; height:800 ;"/>        
+                <input type="text" [(ngModel)]="technology" style="margin-left: 300px; width: 800; height:800 ;"/>        
+                <input type="text" [(ngModel)]="role" style="margin-left: 300px; width: 800; height:800 ;"/>        
+                
                 <br>
                 <input style="margin: 100px;margin-left: 300px;" (click)="upload()" type="button" value="Upload"/>
                 
+
         </div>
 </div>
 

@@ -19,8 +19,11 @@ export class AddComponent implements OnInit {
   uploadSub: Subscription | undefined;
   formData = new FormData();
   message=''
-
-  constructor(private _teacherServices: DataService) { }
+  experience=''
+  technology=''
+  role=''
+  title=''
+  constructor(private _adminService: DataService) { }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
@@ -35,8 +38,11 @@ export class AddComponent implements OnInit {
   }
  
   upload() {
-    this.formData.append("description", this.message);  
-        this._teacherServices.postData(this.formData)  
+    this.formData.append("title", this.title);  
+    this.formData.append("experience", this.experience);  
+    this.formData.append("technology", this.technology);  
+    this.formData.append("role", this.role);  
+    this._adminService.postData(this.formData)  
       .subscribe(res => {
         console.log(res);
         alert('Uploaded Successfully.');

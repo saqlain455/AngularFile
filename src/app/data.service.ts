@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
 export class DataService {
 
   constructor(private http:HttpClient) { }
-  baseUrl="http://localhost:3000/teacher";
+  baseUrl="http://localhost:3000/admin";
 
    postData (formData: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl+'/AddAssignment', formData);
+    return this.http.post<any>(this.baseUrl+'/addpost', formData);
   }
   delData(id:any): Observable<any> {
     return this.http.delete<any>(this.baseUrl+'/DeleteAssignment/'+id);
