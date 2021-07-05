@@ -39,8 +39,8 @@ export class AddComponent implements OnInit {
  
   upload() {
     this.formData.append("title", this.title);  
-    this.formData.append("experience", this.experience);  
-    this.formData.append("technology", this.technology);  
+    this.formData.append("Experience", this.experience);  
+    this.formData.append("technologies", this.technology);  
     this.formData.append("role", this.role);  
     this._adminService.postData(this.formData)  
       .subscribe(res => {
