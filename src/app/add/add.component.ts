@@ -28,14 +28,14 @@ export class AddComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  onFileSelected(event:any) {
-      const file:File = event.target.files[0];
+  // onFileSelected(event:any) {
+  //     const file:File = event.target.files[0];
     
-      if (file) {
-          this.fileName = file.name;
-          this.formData.append("filesent", file);       
-      }
-  }
+  //     if (file) {
+  //         this.fileName = file.name;
+  //         this.formData.append("filesent", file);       
+  //     }
+  // }
  
   upload() {
     this.formData.append("title", this.title);  
